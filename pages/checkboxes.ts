@@ -1,9 +1,10 @@
 import type {Page, Locator} from '@playwright/test';
+import { expect } from '@playwright/test';
 
 export class CheckboxPage {
     private readonly page: Page;
-    private readonly checkboxOne: Locator;
-    private readonly checkboxTwo: Locator;
+    readonly checkboxOne: Locator;
+    readonly checkboxTwo: Locator;
 
     constructor (page: Page) {
         this.page = page;
@@ -18,6 +19,10 @@ export class CheckboxPage {
 
     async clickCheckBoxOne() {
         await this.checkboxOne.click();
+    }
+
+    async expectCheckboxOneCheked() {
+        await expect(this.checkboxOne).toBeChecked();
     }
 
     async clickCheckBoxTwo() {
