@@ -15,7 +15,11 @@ export class DropdownPage {
     }
 
     async selectOption(optionNumber: number) {
-        await this.dropdown.selectOption((optionNumber-1).toString());
-        await expect(this.dropdown).toHaveValue(`Option ${optionNumber}`)
+        await this.dropdown.selectOption((optionNumber).toString());
+        //checks the value attribute.
+        await expect(this.dropdown).toHaveValue(optionNumber.toString())
+        // need to add path for screenshots
+        // await this.page.screenshot({path: 'screenshots/dropdown.png'});
+        //changed the playwrite config to only on failures so the line above is not needed anymore
     }
 }
