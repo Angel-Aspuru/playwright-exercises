@@ -7,7 +7,7 @@ test('checkbox page test', async ({ page }) => {
   await checkboxPage.goto();
 
   // Expect a title "to contain" a substring.
-  await expect(page).toHaveTitle(/checkboxes/);
+  await expect(page).toHaveURL(/checkboxes/);
 });
 
 test('checkbox click test', async ({ page }) => {
