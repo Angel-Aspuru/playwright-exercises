@@ -8,8 +8,8 @@ export class CheckboxPage {
 
     constructor (page: Page) {
         this.page = page;
-        this.checkboxOne = page.getByRole('checkbox' ,{name: 'checkbox 1'});
-        this.checkboxTwo = page.getByRole('checkbox' ,{name: 'checkbox 2'});
+        this.checkboxOne = page.getByRole('checkbox').nth(0);
+        this.checkboxTwo = page.getByRole('checkbox').nth(1);
     }
 
     async goto() {
@@ -18,7 +18,7 @@ export class CheckboxPage {
     }
 
     async clickCheckBoxOne() {
-        await this.checkboxOne.click();
+        await this.checkboxOne.check();
     }
 
     async expectCheckboxOneCheked() {
@@ -26,6 +26,6 @@ export class CheckboxPage {
     }
 
     async clickCheckBoxTwo() {
-        await this.checkboxTwo.click();
+        await this.checkboxTwo.check();
     }
 }

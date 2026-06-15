@@ -13,6 +13,8 @@ test('checkbox page test', async ({ page }) => {
 test('checkbox click test', async ({ page }) => {
 
   const checkboxPage = new CheckboxPage(page);
+  
+  await checkboxPage.goto();
 
   // Click the checkbox one.
   await checkboxPage.clickCheckBoxOne();
