@@ -10,5 +10,7 @@ test('test table page', async ({page}) => {
 test('test table has 4 rows', async ({page}) => {
     const tablePage = new TablePage(page);
 
+    await tablePage.goto();
+
     await tablePage.validateNumberOfRows(4);
 });
