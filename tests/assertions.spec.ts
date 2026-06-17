@@ -1,6 +1,5 @@
 import test from "@playwright/test";
 import { LoginPageAssertions } from "../pages/assertions-page";
-import { log } from "node:console";
 
 test('Validating Url', async ({ page }) => {
     const loginPage = new LoginPageAssertions(page);
