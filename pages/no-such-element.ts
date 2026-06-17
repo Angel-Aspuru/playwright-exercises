@@ -14,7 +14,7 @@ export class NoSuchElementPage{
         await this.page.goto('https://the-internet.herokuapp.com/add_remove_elements/');
     
         
-        await expect(this.page).toHaveURL(/add_remove_elemets/);
+        await expect(this.page).toHaveURL(/add_remove_elements/);
     }
 
     async elementVisible() {
