@@ -1,7 +1,7 @@
 import {test, expect }from "@playwright/test";
 import type { Page } from "@playwright/test";
 import { AdvanceWiatPage } from "../pages/advance-waits";
-import { waitForDebugger } from "node:inspector";
+
 
 test.describe.configure({mode: 'serial'});
 
