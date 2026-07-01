@@ -26,4 +26,4 @@ test('runs second after first test', async ({page}) => {
     const waitPage = new AdvanceWiatPage(page);
 
     await waitPage.clickButton('Gallery');
-})
+}) 
